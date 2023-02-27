@@ -7,6 +7,11 @@ const routes: Routes = [
     path: 'offline',
     component: OfflineComponent,
   },
+  {
+    path: 'lazyer',
+    loadChildren: () =>
+      import('./modules/sample/sample.module').then((m) => m.SampleModule),
+  },
 ];
 
 @NgModule({
